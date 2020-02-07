@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.Fragment;
 
 
 import android.app.ProgressDialog;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.lang.reflect.Array;
+import com.example.katalogfilm.Adapter.MovieAdapter;
+import com.example.katalogfilm.Parcelable.Movie;
+import com.example.katalogfilm.R;
+import com.example.katalogfilm.ViewModel.ViewModelMovie;
+
 import java.util.ArrayList;
 
 
@@ -45,7 +48,7 @@ public class FragmentMovie extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage(getString(R.string.app_name));
+        progressDialog.setMessage("Loading");
         if (movies.size() <= 0)
         {
             progressDialog.show();

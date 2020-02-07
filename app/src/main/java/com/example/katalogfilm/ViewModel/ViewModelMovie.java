@@ -1,25 +1,23 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.ViewModel;
 
-import android.os.Parcelable;
 import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.katalogfilm.Parcelable.Movie;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 public class ViewModelMovie extends ViewModel {
+    /*private static String URLFULL= "https://api.themoviedb.org/3/discover/movie?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";*/
     private MutableLiveData<ArrayList<Movie>> listMovie = new MutableLiveData<>();
-    private static final String URLFULL= Web.URL_MOVIE_AND_TV_SHOW
-            + Web.URL_MOVIES_DISCOVER
-            + "?api_key="
-            + Web.API +
-            "&language=en-US";
+    private static final String URLFULL= "https://api.themoviedb.org/3/discover/movie?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";
     public void setMovies(){
         String url=URLFULL;
         final ArrayList<Movie> listItem = new ArrayList<>();
@@ -30,7 +28,7 @@ public class ViewModelMovie extends ViewModel {
                 try {
                     String result = new String(responseBody);
                     JSONObject responseObject = new JSONObject(result);
-                    JSONArray list = responseObject.getJSONArray("results");
+                        JSONArray list = responseObject.getJSONArray("results");
                     for (int i = 0; i < list.length(); i++) {
                         JSONObject movie = list.getJSONObject(i);
                         Movie movieItems = new Movie(movie);

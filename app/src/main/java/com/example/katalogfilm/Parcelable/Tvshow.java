@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.Parcelable;
 
 import android.os.Parcel;
 import android.os.Parcelable;

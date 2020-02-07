@@ -3,20 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_movie"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
         android:title="@string/movie"
-        app:showAsAction="ifRoom" />
+        android:enabled="true"
+        android:icon="@drawable/movie"
+        />
     <item
         android:id="@+id/action_tvshow"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/tv"
         android:title="@string/tvshow"
-        app:showAsAction="ifRoom" />
+/>
     <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/action_fav_movies"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="@string/favorite"
-        app:showAsAction="ifRoom" />
+        android:icon="@drawable/star"
+
+ />
+    <item
+        android:id="@+id/action_fav_tvshows"
+        android:title="@string/favorite_tvshow"
+        android:enabled="true"
+        android:icon="@drawable/star_added"
+
+ />
 </menu>

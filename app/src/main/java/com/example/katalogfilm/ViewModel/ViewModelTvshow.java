@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.ViewModel;
 
 import android.util.Log;
 
@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.katalogfilm.Parcelable.Tvshow;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -17,14 +18,10 @@ import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 
 public class ViewModelTvshow extends ViewModel {
-    private static final String URLFULL = Web.URL_MOVIE_AND_TV_SHOW
-            + Web.URL_TVSHOWS_DISCOVER
-            + "?api_key="
-            + Web.API +
-            "&language=en-US";
+    private static final String URLFULL = "https://api.themoviedb.org/3/discover/tv?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";
     private MutableLiveData<ArrayList<Tvshow>> listTvshow = new MutableLiveData<>();
 
-    public void setListTvshow(final String cities) {
+    public void setListTvshow(final String id) {
         final ArrayList<Tvshow> listItems = new ArrayList<>();
 
         AsyncHttpClient client = new AsyncHttpClient();

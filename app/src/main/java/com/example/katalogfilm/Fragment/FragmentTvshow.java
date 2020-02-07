@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.Fragment;
 
 
 import android.app.ProgressDialog;
@@ -14,6 +14,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.katalogfilm.Adapter.TvshowAdapter;
+import com.example.katalogfilm.R;
+import com.example.katalogfilm.Parcelable.Tvshow;
+import com.example.katalogfilm.ViewModel.ViewModelTvshow;
 
 import java.util.ArrayList;
 
@@ -36,7 +41,7 @@ public class FragmentTvshow extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage(getString(R.string.app_name));
+        progressDialog.setMessage("Loading");
         if (tvshows.size() <= 0) {
             progressDialog.show();
         } else {

@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.Parcelable;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -12,10 +12,10 @@ public class Movie implements Parcelable {
     private String release_date;
     private double vote_average;
     private int poster_path;
+    public static final String URL_IMAGE = "https://image.tmdb.org/t/p/w342";
     private int backdrop_path;
     private String poster_path_string;
     private String backdrop_path_string;
-
     public String getPoster_path_string() {
         return poster_path_string;
     }
@@ -136,8 +136,8 @@ public class Movie implements Parcelable {
             String overview = object.getString("overview");
             String release_date = object.getString("release_date");
             Double vote_average = object.getDouble("vote_average");
-            String poster_path = Web.URL_IMAGE + object.getString("poster_path");
-            String backdrop_path = Web.URL_IMAGE + object.getString("backdrop_path");
+            String poster_path = URL_IMAGE + object.getString("poster_path");
+            String backdrop_path = URL_IMAGE + object.getString("backdrop_path");
             this.id = id;
             this.title = title;
             this.overview = overview;

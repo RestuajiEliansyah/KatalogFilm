@@ -1,4 +1,4 @@
-package com.example.katalogfilm;
+package com.example.katalogfilm.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -8,27 +8,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.katalogfilm.DetailActivity.DetailMovie;
+import com.example.katalogfilm.Parcelable.Movie;
+import com.example.katalogfilm.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewHolder> {
     private Context context;
     private ArrayList<Movie> movies;
+    public static final String URL_IMAGE = "https://image.tmdb.org/t/p/w342";
     public class RecycleViewHolder extends RecyclerView.ViewHolder
     {
-        TextView tvTitle,tvOverview;
-        ImageView imgPhoto;
+        TextView title, overview;
+        ImageView photo;
         public RecycleViewHolder(@NonNull View itemView)
         {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.txt_movie);
-            tvOverview = itemView.findViewById(R.id.txt_movie_description);
-            imgPhoto = itemView.findViewById(R.id.img_movie);
+            title = itemView.findViewById(R.id.txt_movie);
+            overview = itemView.findViewById(R.id.txt_movie_description);
+            photo = itemView.findViewById(R.id.img_movie);
         }
     }
     public ArrayList<Movie> getMovies()
@@ -58,10 +60,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewH
     }
     @Override
     public void onBindViewHolder(@NonNull final RecycleViewHolder recycleViewHolder, final int i) {
-        recycleViewHolder.tvOverview.setText(movies.get(i).getOverview());
-        recycleViewHolder.tvTitle.setText(movies.get(i).getTitle());
+        recycleViewHolder.overview.setText(movies.get(i).getOverview());
+        recycleViewHolder.title.setText(movies.get(i).getTitle());
         Glide.with(context).load(movies.get(i).getPoster_path_string())
-                .into(recycleViewHolder.imgPhoto);
+                .into(recycleViewHolder.photo);
         recycleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
