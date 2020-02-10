@@ -17,7 +17,7 @@
         android:id="@+id/action_fav_movies"
         android:enabled="true"
         android:icon="@drawable/star"
-
+        android:title="@string/favorite_movies"
  />
     <item
         android:id="@+id/action_fav_tvshows"
