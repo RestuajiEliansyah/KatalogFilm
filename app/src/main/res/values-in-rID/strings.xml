@@ -20,7 +20,7 @@
     <string name="favorite_tvshow">Fav Acara Tv</string>
     <string name="setting">Ganti Bahasa</string>
     <string name="date">00/00/0000</string>
-
+    <string name="favorite_movies">Fav Films</string>
     <string name="title_activity_main2">Main2Activity</string>
 
 </resources>
