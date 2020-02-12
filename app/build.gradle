@@ -40,7 +40,7 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     implementation 'com.loopj.android:android-async-http:1.4.9'
     implementation 'com.android.support:recyclerview-v7:29.0.0'
-
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'

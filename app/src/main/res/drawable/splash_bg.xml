@@ -4,7 +4,7 @@
     <item android:drawable="@color/cardview_shadow_end_color" />
 
     <item>
-        <bitmap android:src="@drawable/splash_img" />
+        <bitmap android:src="@drawable/cinema" />
         <!--Jangan salah masukin nama logonya-->
     </item>
 </layer-list>
