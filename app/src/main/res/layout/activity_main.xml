@@ -5,6 +5,7 @@
     android:background="@android:color/black"
     android:id="@+id/coordinatorlayout"
     android:layout_width="match_parent"
+    app:layout_behavior=".Helper.BottomNavigationBehavior"
     android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
