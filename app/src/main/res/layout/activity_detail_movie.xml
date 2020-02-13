@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity.DetailMovie">
@@ -29,20 +30,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
     </RelativeLayout>
+
     <TextView
         android:id="@+id/title_movie"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:elevation="2dp"
+        android:fontFamily="serif"
         android:padding="3dp"
-        android:text="@string/txt_movie"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
         android:scaleType="fitXY"
+        android:text="@string/txt_movie"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/top_relative"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_relative" />
 
     <ImageView
         android:id="@+id/imageRate"
@@ -63,7 +66,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/rate"
         android:textSize="12sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/imageRate"
         app:layout_constraintTop_toBottomOf="@+id/title_movie" />
 
@@ -86,7 +89,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/date"
         android:textSize="12sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/rate_movie" />
 
@@ -100,7 +103,7 @@
         android:layout_marginBottom="8dp"
         android:lineSpacingMultiplier="1"
         android:text="@string/description"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

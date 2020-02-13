@@ -14,7 +14,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:clipToPadding="false"
         android:padding="8dp">
         <ImageView
             android:id="@+id/img_fav_movie"
@@ -23,12 +24,34 @@
             android:layout_marginBottom="4dp"
             android:scaleType="centerCrop"
             tools:src="@color/colorAccent" />
-
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/img_fav_movie"
+            android:layout_alignBottom="@+id/img_fav_movie"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="-10dp"
+            android:src="@color/design_default_color_primary_dark" />
+        <TextView
+            android:id="@+id/txt_rate_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/profile_image"
+            android:layout_alignTop="@id/profile_image"
+            android:layout_alignRight="@id/profile_image"
+            android:layout_alignBottom="@id/profile_image"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="9.2"
+            android:textColor="@android:color/white" />
         <TextView
             android:id="@+id/txt_fav_movie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
@@ -45,6 +68,7 @@
             android:layout_above="@id/layout_button"
             android:layout_below="@id/txt_fav_movie"
             android:layout_marginStart="17dp"
+            android:textColor="@android:color/white"
             android:layout_marginLeft="17dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="16dp"

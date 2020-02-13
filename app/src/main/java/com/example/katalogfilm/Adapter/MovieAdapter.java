@@ -23,7 +23,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewH
     public static final String URL_IMAGE = "https://image.tmdb.org/t/p/w342";
     public class RecycleViewHolder extends RecyclerView.ViewHolder
     {
-        TextView title, overview;
+        TextView title, overview,txtVoteAverage;
         ImageView photo;
         public RecycleViewHolder(@NonNull View itemView)
         {
@@ -31,6 +31,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewH
             title = itemView.findViewById(R.id.txt_movie);
             overview = itemView.findViewById(R.id.txt_movie_description);
             photo = itemView.findViewById(R.id.img_movie);
+            txtVoteAverage = itemView.findViewById(R.id.txt_rate);
         }
     }
     public ArrayList<Movie> getMovies()
@@ -62,6 +63,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.RecycleViewH
     public void onBindViewHolder(@NonNull final RecycleViewHolder recycleViewHolder, final int i) {
         recycleViewHolder.overview.setText(movies.get(i).getOverview());
         recycleViewHolder.title.setText(movies.get(i).getTitle());
+        recycleViewHolder.txtVoteAverage.setText(String.valueOf(movies.get(i).getVote_average()));
         Glide.with(context).load(movies.get(i).getPoster_path_string())
                 .into(recycleViewHolder.photo);
         recycleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {

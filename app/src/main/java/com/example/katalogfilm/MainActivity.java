@@ -53,15 +53,19 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_movie:
+                        title = getResources().getString(R.string.movie);
                         setToMovieFragment();
                         break;
                     case R.id.action_tvshow:
+                        title = getResources().getString(R.string.tvshow);
                         setToTvshowFragment();
                         break;
                     case R.id.action_fav_movies:
+                        title = getResources().getString(R.string.favorite);
                         setToFavMovie();
                         break;
                     case R.id.action_fav_tvshows:
+                        title = getResources().getString(R.string.favorite_tvshow);
                         setToFavTvshow();
                         break;
                 }
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
     private void setToTvshowFragment() {
-        setTitle("Tv Show");
+        setTitle(title);
         fragmentTransaction = fragmentManager.beginTransaction();
         Fragment fragment = fragmentManager.findFragmentByTag(FragmentTvshow.class.getSimpleName());
         if (!(fragment instanceof FragmentTvshow)) {

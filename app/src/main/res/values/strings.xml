@@ -18,5 +18,6 @@
     <string name="poster_konten">Content Poster</string>
     <string name="star">star</string>
     <string name="favorite_movies">Fav Movies</string>
+    <string name="oop_txt">Ooops... You don\'t have any favourite Movie :(</string>
 
 </resources>

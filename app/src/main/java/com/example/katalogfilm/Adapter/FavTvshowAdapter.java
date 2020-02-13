@@ -46,6 +46,7 @@ public class FavTvshowAdapter extends RecyclerView.Adapter<FavTvshowAdapter.Recy
     public void onBindViewHolder(@NonNull RecycleViewHolder recycleViewHolder, final int i) {
         recycleViewHolder.title.setText(tvshows.get(i).getName());
         recycleViewHolder.overview.setText(tvshows.get(i).getOverview());
+        recycleViewHolder.txtVoteAverage.setText(String.valueOf(tvshows.get(i).getVote_average()));
         Glide.with(context).load(tvshows.get(i).getPoster_path_string())
                 .into(recycleViewHolder.photo);
 
@@ -69,11 +70,13 @@ public class FavTvshowAdapter extends RecyclerView.Adapter<FavTvshowAdapter.Recy
         TextView title;
         TextView overview;
         ImageView photo;
+        TextView txtVoteAverage;
         public RecycleViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.txt_fav_tvshow);
             overview = itemView.findViewById(R.id.txt_fav_tvshow_description);
             photo = itemView.findViewById(R.id.img_fav_tvshow);
+            txtVoteAverage = itemView.findViewById(R.id.txt_rate_fav_movie);
         }
     }
 }

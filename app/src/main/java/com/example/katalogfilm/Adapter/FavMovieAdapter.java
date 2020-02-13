@@ -51,6 +51,7 @@ public class FavMovieAdapter extends RecyclerView.Adapter<FavMovieAdapter.Recycl
     public void onBindViewHolder(@NonNull RecycleViewHolder recycleViewHolder, final int i) {
         recycleViewHolder.title.setText(movies.get(i).getTitle());
         recycleViewHolder.overview.setText(movies.get(i).getOverview());
+        recycleViewHolder.txtVoteAverage.setText(String.valueOf(movies.get(i).getVote_average()));
         Glide.with(context).load(movies.get(i).getPoster_path_string())
                 .into(recycleViewHolder.photo);
 
@@ -68,18 +69,18 @@ public class FavMovieAdapter extends RecyclerView.Adapter<FavMovieAdapter.Recycl
     public int getItemCount() {
         return movies.size();
     }
-
     public class RecycleViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
         TextView overview;
         ImageView photo;
-
+        TextView txtVoteAverage;
         public RecycleViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.txt_fav_movie);
             overview = itemView.findViewById(R.id.txt_fav_movie_description);
             photo = itemView.findViewById(R.id.img_fav_movie);
+            txtVoteAverage = itemView.findViewById(R.id.txt_rate_fav);
         }
     }
 }

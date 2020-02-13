@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity.DetailTvshow">
@@ -36,7 +37,8 @@
             android:padding="3dp"
             android:text="@string/txt_movie"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:fontFamily="serif"
             android:textSize="20sp"
             android:scaleType="fitXY"
             android:textAlignment="center"
@@ -62,7 +64,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/rate"
             android:textSize="12sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/white"
             app:layout_constraintStart_toEndOf="@+id/imageRate"
             app:layout_constraintTop_toBottomOf="@+id/title_tvshow" />
 
@@ -85,7 +87,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/date"
             android:textSize="12sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/white"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/rate_tvshow" />
 
@@ -99,7 +101,7 @@
             android:layout_marginBottom="8dp"
             android:lineSpacingMultiplier="1"
             android:text="@string/description"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

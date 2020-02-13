@@ -51,6 +51,7 @@ public class TvshowAdapter extends RecyclerView.Adapter<TvshowAdapter.RecycleVie
     public void onBindViewHolder(@NonNull final TvshowAdapter.RecycleViewHolder recycleViewHolder, final int i) {
         recycleViewHolder.overview.setText(tvshows.get(i).getOverview());
         recycleViewHolder.title.setText(tvshows.get(i).getName());
+        recycleViewHolder.txtVoteAverage.setText(String.valueOf(tvshows.get(i).getVote_average()));
         Glide.with(context).load(tvshows.get(i).getPoster_path_string())
                 .into(recycleViewHolder.photo);
         recycleViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -73,11 +74,13 @@ public class TvshowAdapter extends RecyclerView.Adapter<TvshowAdapter.RecycleVie
         TextView title;
         TextView overview;
         ImageView photo;
+        TextView txtVoteAverage;
         public RecycleViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.txt_tvshow);
             overview = itemView.findViewById(R.id.txt_tvshow_description);
             photo = itemView.findViewById(R.id.img_tvshow);
+            txtVoteAverage = itemView.findViewById(R.id.txt_rate_tvshow);
         }
     }
 }
