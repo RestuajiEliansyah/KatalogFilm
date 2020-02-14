@@ -2,7 +2,7 @@
     <string name="add_favorite">add_favorite</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="tab_text_1">Tab 1</string>
-    <string name="app_name">Katalog FIlm</string>
+    <string name="app_name">Movie Catalogue</string>
     <string name="movie">Movies</string>
     <string name="tvshow">Tv Show</string>
     <string name="favorite">Fav Movies</string>
@@ -14,10 +14,9 @@
     <string name="description">Description</string>
     <string name="date">00/00/0000</string>
     <string name="rate">rate</string>
-    <string name="kalender">Calender</string>
-    <string name="poster_konten">Content Poster</string>
+    <string name="calender">Calender</string>
+    <string name="poster_content">Content Poster</string>
     <string name="star">star</string>
     <string name="favorite_movies">Fav Movies</string>
-    <string name="oop_txt">Ooops... You don\'t have any favourite Movie :(</string>
 
 </resources>

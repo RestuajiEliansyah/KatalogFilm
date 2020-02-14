@@ -4,8 +4,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="rate">rating</string>
-    <string name="kalender">kalender</string>
-    <string name="poster_konten">Poster Konten</string>
+    <string name="calender">kalender</string>
+    <string name="poster_content">Poster Konten</string>
     <string name="star">bintang</string>
     <string name="add_favorite">tambah favorite</string>
     <string name="app_name">Katalog Film</string>

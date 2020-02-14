@@ -15,9 +15,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 public class ViewModelMovie extends ViewModel {
+    static String language = "en-US";
     /*private static String URLFULL= "https://api.themoviedb.org/3/discover/movie?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";*/
     private MutableLiveData<ArrayList<Movie>> listMovie = new MutableLiveData<>();
-    private static final String URLFULL= "https://api.themoviedb.org/3/discover/movie?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";
+    private static final String URLFULL= "https://api.themoviedb.org/3/discover/movie?&api_key=1b0b356a4b3d30fded43a1e672641b47&language="+language;
     public void setMovies(){
         String url=URLFULL;
         final ArrayList<Movie> listItem = new ArrayList<>();

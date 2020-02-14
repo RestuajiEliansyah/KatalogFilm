@@ -47,7 +47,7 @@
 
         <ImageView
             android:id="@+id/imageRate"
-            android:contentDescription="@string/kalender"
+            android:contentDescription="@string/calender"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:background="@drawable/star"

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 
 public class ViewModelTvshow extends ViewModel {
-    private static final String URLFULL = "https://api.themoviedb.org/3/discover/tv?api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";
+    private static final String URLFULL = "https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=1b0b356a4b3d30fded43a1e672641b47&language=en-US";
     private MutableLiveData<ArrayList<Tvshow>> listTvshow = new MutableLiveData<>();
 
     public void setListTvshow(final String id) {
