@@ -62,6 +62,7 @@ card_view:cardCornerRadius="4dp">
         android:layout_toRightOf="@id/img_movie"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:maxLines="2"
         tools:text="@string/txt_movie" />
     <TextView
         android:id="@+id/txt_movie_description"
