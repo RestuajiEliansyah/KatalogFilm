@@ -50,6 +50,7 @@ card_view:cardCornerRadius="4dp">
         android:textColor="@android:color/white" />
     <TextView
         android:id="@+id/txt_movie"
+        android:ellipsize="end"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -78,7 +79,7 @@ card_view:cardCornerRadius="4dp">
         android:layout_toEndOf="@id/img_movie"
         android:layout_toRightOf="@id/img_movie"
         android:ellipsize="end"
-        android:maxLines="5"
+        android:maxLines="4"
         tools:text="@string/description" />
 </RelativeLayout>
 </androidx.cardview.widget.CardView>

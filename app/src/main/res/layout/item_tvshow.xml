@@ -59,6 +59,8 @@
             android:layout_toRightOf="@id/img_tvshow"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="2"
             tools:text="@string/txt_movie" />
 
         <TextView
@@ -75,7 +77,7 @@
             android:layout_toEndOf="@id/img_tvshow"
             android:layout_toRightOf="@id/img_tvshow"
             android:ellipsize="end"
-            android:maxLines="5"
+            android:maxLines="4"
             tools:text="@string/description" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
