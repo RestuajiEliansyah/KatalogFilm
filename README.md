@@ -1,5 +1,5 @@
 # MovieCatalogue
-Feature : 
+The Features : 
 - Splash Screen
 - List Item with RecyclerView
 - Data From https://www.themoviedb.org
